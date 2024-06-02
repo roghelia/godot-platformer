@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://do056s26pw76l"]
+
+[ext_resource type="Texture2D" uid="uid://cg4r1ica8qute" path="res://assets/sprites/castle.jpeg" id="1_mopi1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oerv3"]
+size = Vector2(147, 226)
+
+[node name="Castle" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mopi1")
+region_enabled = true
+region_rect = Rect2(0, 314.476, 320.463, 308.891)
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+position = Vector2(-3.5, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+shape = SubResource("RectangleShape2D_oerv3")
